@@ -97,7 +97,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "https://code.highcharts.com/highcharts.js",
+              "https://code.highcharts.com/highcharts-3d.js",
+              "https://code.highcharts.com/modules/exporting.js",
+              "https://code.highcharts.com/modules/export-data.js",
+              "https://code.highcharts.com/modules/accessibility.js"
+            ]
           }
         }
       }
