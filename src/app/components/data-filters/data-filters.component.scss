@@ -34,14 +34,19 @@
   padding: 8px;
   justify-content:center;
   align-items: center;
+  
+
+}
+.form-group{
+  position: relative;
 }
 
 .filter-label {
-  position:relative;
+  position:absolute;
   background-color: #FEFFFA;
   left: 13px;
   font-size: 12px;
-  top: 7px;
+  top: -7px;
   padding-left: 4px;
   z-index: 1;
 

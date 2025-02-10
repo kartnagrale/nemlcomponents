@@ -12,7 +12,7 @@
   
   <div class="container" *ngIf="isFilterContentOn">
     <div class="form-group">
-      <!-- <label class="filter-label">Market<span class="required">*</span></label> -->
+      <label class="filter-label">Market<span class="required">*</span></label>
       <p-autoComplete 
         [(ngModel)]="selectedMarket" 
         [suggestions]="Markets" 
@@ -24,7 +24,7 @@
     </div>
     
     <div class="form-group">
-      <!-- <label class="filter-label">Commodity ID<span class="required">*</span></label> -->
+      <label class="filter-label">Commodity ID<span class="required">*</span></label>
       <p-autoComplete 
         [(ngModel)]="selectedCommodity" 
         [suggestions]="Commodities" 
@@ -36,7 +36,7 @@
     </div>
   
     <div class="form-group">
-      <!-- <label class="filter-label">Date of Establishment<span class="required">*</span></label> -->
+      <label class="filter-label">Date of Establishment<span class="required">*</span></label>
       <p-calendar 
         [(ngModel)]="selectedDateRange"
         selectionMode="range"
