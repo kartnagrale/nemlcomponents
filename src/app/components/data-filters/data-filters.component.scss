@@ -1,168 +1,74 @@
 .filters-container {
+  background-color: #FEFFFA;
+  border-radius: 8px;
+  border: 1px solid #EEEFEB;
+  margin: 10px;
+  padding: 16px;
+  font-family: "Rubik", serif;
+}
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-title {
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+}
+.header-text {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+
+.container {
+  display: grid;
+  gap: 10px;
+  padding: 8px;
+  justify-content:center;
+  align-items: center;
+}
+
+.filter-label {
+  position:relative;
+  background-color: #FEFFFA;
+  left: 13px;
+  font-size: 12px;
+  top: 7px;
+  padding-left: 4px;
+  z-index: 1;
+
+  .required {
     background-color: #FEFFFA;
-    border-radius: 8px;
-    border: 1px solid #EEEFEB;
-    margin: 10px;
-    padding: 16px;
-    font-family: "Rubik", serif;
+    padding-right: 4px;
+    color: red;
   }
-  .accordion-title{
-    display: flex;
-    font-size: 24px;
-    font-weight: 600;
-    align-items: center;
-    gap: 8px;
-    height: 28px;
-    .filter-icon{
-        border: 1px solid #DDE0E4;
-        border-radius: 8px;
-        height: 28px;
-        width: 28px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-  }
-  
-  .filters-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header-text {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    color: #1a1a1a;
-  }
-  
-  .chevron-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-  
-  .help-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-  }
-  
-  .help-button svg {
-    width: 20px;
-    height: 20px;
-    color: #65d46e;
-  }
-  
-  .filters-content {
-    display: flex;
-    margin-top: 16px;
-    // justify-content: space-between;
-    width: 100%;
-    padding-left: 8px;
-    padding-right: 8px;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .filter-group {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    justify-content: space-between;
-    height: 56px;
-    width: 100%;
-  }
-
-.filter-group>label {
-    font-size: 14px;
-    color: #4a4a4a;
-    font-weight: 600;
-    background-color: #FEFFFA;
 }
 
-.required {
-    color: #ff4d4f;
-    margin-left: 4px;
-}
-
-.select-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    .filter-label{
-      position: absolute;
-      background-color: #FEFFFA;
-      left: 13px;
-      font-size: 12px;
-      top: -8px;
-      padding-left: 4px;
-      .required{
-        background-color: #FEFFFA;
-        padding-right: 4px;
-      }
-    }
-}
-
-select {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #d9d9d9;
-    border-radius: 6px;
-    height: 56px;
-    background-color: white;
-    color: #858999;
-    font-size: 14px;
-    appearance: none;
-}
-
-select:focus {
-    outline: none;
-    border-color: #65d46e;
-}
-
-.custom-dropdown-icon {
-    position: absolute;
-    right: 0px;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-}
-
-
-
-  
-  .fetch-button {
-    background-color: #50CE50;
-    border: 1px solid #40C940;
-    display: flex;
-    align-items: center;
-    width: 143px;
-    height: 56px;
-    color: white;
-    border-radius: 9px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    .fetch-button-text{
-        font-weight: 500;
-        size: 16px;
-        width: 143px;
-        line-height: 18.96px;
-        font-family: "Rubik", serif;
-    }
+/* Desktop/Laptop: 1 row, 4 columns */
+@media screen and (min-width: 1025px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .fetch-button:hover {
-    background-color: #40C940;
+}
+
+/* Tablet: 2 rows, 2 columns */
+@media screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .fetch-button svg {
-    width: 30px;
-    height: 30px;
+}
+
+/* Mobile: 4 rows, 1 column */
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
   }
+}
